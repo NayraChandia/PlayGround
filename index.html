@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#080b0c" />
+  <title>REGION ZERO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game"></canvas>
+    <div class="vignette"></div>
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✳</span><div><strong>REGION ZERO</strong><small>CUADERNO DE CAMPO · 01</small></div></div>
+      <button id="inventory-toggle" class="inventory-toggle" aria-label="Abrir inventario"><span class="bag-icon">◇</span><span class="inventory-label">BOLSA</span><b id="item-count">0</b></button>
+    </header>
+    <div class="chapter"><span>ACTO I</span><i></i><span>LA CIÉNAGA DE LOS NOMBRES</span></div>
+    <div id="objective" class="objective"><span class="objective-dot"></span><span id="objective-text">Despierta. Encuentra el origen del susurro.</span></div>
+    <div id="prompt" class="prompt hidden"><span class="keycap">E</span><span id="prompt-text">EXAMINAR</span></div>
+    <section id="inventory-panel" class="inventory-panel hidden"><div class="panel-kicker">LO QUE CONSERVAS</div><h2>Bolsa de viaje</h2><div id="inventory-items" class="inventory-items"><p class="empty-inventory">Aún está vacía.</p></div><button id="close-inventory" class="text-button">CERRAR <span>×</span></button></section>
+    <section id="dialogue" class="dialogue hidden" aria-live="polite"><div class="dialogue-inner"><div class="speaker-row"><span class="speaker-line"></span><span id="speaker">CIÉNAGA</span></div><p id="dialogue-text"></p><div id="choices" class="choices"></div><button id="continue" class="continue hidden">CONTINUAR <span>↗</span></button></div></section>
+    <section id="start-screen" class="screen start-screen"><div class="start-art"><div class="moon"></div><div class="title-wrap"><div class="eyebrow">UNA HISTORIA DE LA FRONTERA</div><h1>REGION<br><em>ZERO</em></h1><p>El barro recuerda lo que la sangre olvida.</p><button id="start-button" class="primary-button">DESPERTAR <span>↗</span></button></div><div class="start-footer">EXPLORA · ESCUCHA · ELIGE</div></div><div class="start-side"><div class="side-number">01 <span>/ 03</span></div><p>Un lugar que no aparece en los mapas.<br>Una voz que conoce tu nombre.</p><div class="side-rule"></div><small>DESLIZA PARA MIRAR<br>CAMINA PARA RECORDAR</small></div></section>
+    <section id="ending-screen" class="screen ending-screen hidden"><div class="ending-card"><div class="eyebrow">REGISTRO CERRADO · 01</div><div id="ending-symbol" class="ending-symbol">✳</div><h2 id="ending-title">EL UMBRAL</h2><p id="ending-copy"></p><div id="ending-note" class="ending-note"></div><button id="restart-button" class="primary-button">VOLVER A DESPERTAR <span>↻</span></button></div></section>
+    <div id="mobile-controls" class="mobile-controls"><div id="joystick" class="joystick"><div class="joy-ring"></div><div id="joy-knob" class="joy-knob"></div></div><button id="action-button" class="action-button"><span>✧</span><small>USAR</small></button></div>
+    <div class="control-hint"><span>WASD</span> MOVER <i>·</i> <span>RATÓN</span> MIRAR <i>·</i> <span>E</span> INTERACTUAR</div>
+    <div id="toast" class="toast hidden"></div>
+    <div id="loading" class="loading"><span class="loader-mark">✳</span><span>LA NIEBLA SE ALZA</span></div>
+  </main>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
